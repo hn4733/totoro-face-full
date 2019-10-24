@@ -1,6 +1,6 @@
 # totoro-face-full
 
-## Additional Files
+## Additional Files - place in root
 
 1. To get the backend to work you will need to create an .env file and input your own values for the following: 
 ```
