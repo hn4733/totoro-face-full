@@ -1,0 +1,10 @@
+#root:empty {
+  background-image: url('./images/totoro-loading.gif');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 540px;
+  max-width: 100%;
+  height: 540px;
+  margin: 0 auto;
+}

@@ -1,0 +1,57 @@
+{
+	"name": "facedetection-server",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"engines": {
+		"node": "10.11.0"
+	},
+	"scripts": {
+		"start": "nodemon --exec babel-node src/index.js",
+		"test:run-server": "TEST_DATABASE=facedetection npm start",
+		"test:execute-test": "mocha --require @babel/register 'src/**/*.spec.js'",
+		"test": "echo \"No test specified\" && exit 0",
+		"build-babel": "babel -d ./build ./src -s",
+		"clean": "rm -rf build && mkdir build",
+		"build": "npm run clean && npm run build-babel"
+	},
+	"keywords": [],
+	"author": "Henry Nguyen HN Builds",
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/core": "^7.1.6",
+		"@babel/node": "^7.0.0",
+		"@babel/register": "^7.0.0",
+		"@babel/cli": "^7.6.0",
+		"axios": "^0.18.1",
+		"chai": "^4.2.0",
+		"mocha": "^5.2.0",
+		"morgan": "^1.9.1",
+		"nodemon": "^1.18.7"
+	},
+	"dependencies": {
+		"@babel/preset-env": "^7.1.6",
+		"@fortawesome/fontawesome-svg-core": "^1.2.19",
+		"@fortawesome/free-solid-svg-icons": "^5.9.0",
+		"@fortawesome/react-fontawesome": "^0.1.4",
+		"apollo-server": "^2.2.3",
+		"apollo-server-express": "^2.2.3",
+		"bcrypt": "^3.0.2",
+		"cors": "^2.8.5",
+		"dataloader": "^1.4.0",
+		"dotenv": "^6.1.0",
+		"eslint-utils": "^1.4.3",
+		"express": "^4.16.4",
+		"graphql": "^14.0.2",
+		"graphql-iso-date": "^3.6.1",
+		"graphql-resolvers": "^0.2.2",
+		"jsonwebtoken": "^8.4.0",
+		"nodemailer": "^6.3.0",
+		"pg": "^7.6.1",
+		"sequelize": "^5.9.2",
+		"uuid": "^3.3.2"
+	},
+	"resolutions": {
+		"babel-core": "7.0.0-bridge.0"
+	}
+}
